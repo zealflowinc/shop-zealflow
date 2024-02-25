@@ -10,7 +10,7 @@ const navBar = ['New & Featured', 'Men', 'Women', 'Kids', 'Sale', 'Customise'];
 function HeaderNavBar() {
     return (
         <div className="w-full h-[64px] px-primary flex justify-between items-center">
-            <SiNike className="text-[60px]" />
+            <SiNike className="text-[60px] cursor-pointer hover:text-gray-500 transition-all" />
 
             <div className="flex font-medium text-[17px]">
                 {navBar.map((item, index) => (
