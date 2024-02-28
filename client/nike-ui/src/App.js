@@ -7,13 +7,43 @@ import { ProductDetail } from './pages/ProductDetail';
 
 function App() {
     return (
-        <Routes>
-            <Route path='/' element={<DefaultLayout><Home /></DefaultLayout>}/>
-            <Route path="/cart" element={<DefaultLayout><Cart /></DefaultLayout>}/>
-            <Route path="/product" element={<DefaultLayout><Product /></DefaultLayout>}/>
-            <Route path="/product/:detail" element={<DefaultLayout><ProductDetail /></DefaultLayout>}/>
-            {/* <Route path="/" element={<DefaultLayout></DefaultLayout>}/> */}
-        </Routes>
+        <div className="transition-all">
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <DefaultLayout>
+                            <Home />
+                        </DefaultLayout>
+                    }
+                />
+                <Route
+                    path="/cart"
+                    element={
+                        <DefaultLayout>
+                            <Cart />
+                        </DefaultLayout>
+                    }
+                />
+                <Route
+                    path="/product"
+                    element={
+                        <DefaultLayout>
+                            <Product />
+                        </DefaultLayout>
+                    }
+                />
+                <Route
+                    path="/product/:detail"
+                    element={
+                        <DefaultLayout>
+                            <ProductDetail />
+                        </DefaultLayout>
+                    }
+                />
+                {/* <Route path="/" element={<DefaultLayout></DefaultLayout>}/> */}
+            </Routes>
+        </div>
     );
 }
 

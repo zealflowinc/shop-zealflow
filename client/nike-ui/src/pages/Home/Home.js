@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button';
-import ArtBtnHome from '../../components/ArtMuseum/ArtBtnHome';
-import SlideAlwaysIconic from '../../components/Slides/SlideAlwaysIconic';
 import videoSource from '../../assets/video/pexels_videos_2601.mp4';
-import SlideShopSport from '../../components/Slides/SlideShopSport';
-import SlideMemberBenefits from '../../components/Slides/SlideMemberBenefits';
+import { Title } from '../../components/Title';
+import { SlideAlwaysIconic, SlideMemberBenefits, SlideShopSport } from '../../components/Slides';
+import { ArtBtnHome } from '../../components/ArtMuseum';
 
 const imgFeatured = [
     {
@@ -26,19 +25,19 @@ const imgFeatured = [
 
 const directoryProduct = [
     {
-        tittle: 'Icons',
+        title: 'Icons',
         products: ['Air Force 1', 'Huarache', 'Air Max 90', 'Air Max 95'],
     },
     {
-        tittle: 'Shoes',
+        title: 'Shoes',
         products: ['All Shoes', 'Custom Shoes', 'Jordan Shoes', 'Running Shoes'],
     },
     {
-        tittle: 'Clothing',
+        title: 'Clothing',
         products: ['All Clothing', 'Modest Wear', 'Hoodies & Pullovers', 'Shirts & Tops'],
     },
     {
-        tittle: "Kids'",
+        title: "Kids'",
         products: ['Infant & Toddler Shoes', "Kids' Shoes", "Kids' Jordan Shoes", "Kids' Basketball Shoes"],
     },
 ];
@@ -72,7 +71,7 @@ function Home() {
             </div>
 
             <Link className="">
-                <h2 className="text-[24px] mb-6 font-semibold mt-primary">Featured</h2>
+                <Title>Featured</Title>
                 <div className="flex gap-3">
                     {imgFeatured.map((img, index) => (
                         <div key={index} className="flex-1 overflow-hidden">
@@ -84,7 +83,7 @@ function Home() {
             </Link>
 
             <Link>
-                <h2 className="text-[24px] mb-6 font-semibold mt-primary">Trending</h2>
+                <Title>Trending</Title>
                 <div className="flex gap-3 h-[620px]">
                     {imgFeatured.map((img, index) => (
                         <ArtBtnHome key={index} art={img} />
@@ -109,12 +108,12 @@ function Home() {
             </div>
 
             <div>
-                <h2 className="text-[24px] mb-6 font-semibold mt-primary">Always Iconic</h2>
+                <Title>Always Iconic</Title>
                 <SlideAlwaysIconic />
             </div>
 
-            <div>
-                <h2 className="text-[24px] mb-6 font-semibold mt-[80px]">Don't Miss</h2>
+            <div className="mt-[80px]">
+                <Title>Don't Miss</Title>
                 <video controls autoPlay loop width="100%">
                     <source src={videoSource} type="video/mp4" />
                 </video>
@@ -133,19 +132,19 @@ function Home() {
             </div>
 
             <div className="mb-primary">
-                <h2 className="text-[24px] mb-6 font-semibold mt-primary">Shop by Sport</h2>
+                <Title>Shop by Sport</Title>
                 <SlideShopSport />
             </div>
 
             <div className="mt-[80px] mb-primary">
-                <h2 className="text-[24px] mb-6 font-semibold mt-primary">Member Benefits</h2>
+                <Title>Member Benefits</Title>
                 <SlideMemberBenefits />
             </div>
 
             <div className="w-full flex justify-center gap-[100px] text-[18px] mb-[80px]">
                 {directoryProduct.map((item) => (
                     <div>
-                        <h3 className="font-medium mb-4">{item.tittle}</h3>
+                        <h3 className="font-medium mb-4">{item.title}</h3>
                         {item.products.map((product, index) => (
                             <p
                                 className="text-[#707072] mt-2 cursor-pointer transition-all hover:text-black"

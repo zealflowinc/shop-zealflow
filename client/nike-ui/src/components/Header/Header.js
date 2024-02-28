@@ -3,7 +3,7 @@ import HeaderTop from './HeaderTop';
 
 function Header() {
     return (
-        <div className="w-[100vw]">
+        <div className="w-[100vw] h-[100px]">
             <HeaderTop />
             <HeaderNavBar />
         </div>
